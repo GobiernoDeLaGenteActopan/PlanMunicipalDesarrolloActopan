@@ -1,0 +1,14 @@
+/*Base.html*/
+
+.logo-img{
+  width: 10vw;
+  border-radius: 50%;
+}
+
+.background-primary{
+  background: #76227c !important;
+}
+
+.color-accent{
+  color: #fff !important;
+}

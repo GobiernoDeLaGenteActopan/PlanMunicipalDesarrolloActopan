@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from indicadores import url as IndicadoresUrls
+from indicadores import urls as IndicadoresUrls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
