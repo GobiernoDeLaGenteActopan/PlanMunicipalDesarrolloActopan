@@ -1,3 +1,22 @@
 from django.db import models
 
-# Create your models here.
+class Indicadores(models.Model):
+    indicador = models.CharField(max_length=200)
+    eje = models.CharField(max_length=250)
+    objetivo = models.TextField()
+    estrategia = models.TextField()
+    linea_accion = models.TextField()
+    descripcion = models.TextField()
+    nombre_formato = models.CharField(max_length=140)
+    dimension_medir = models.CharField(max_length140)
+    observaciones = models.TextField()
+    metodo_calculo = models.CharField(max_length=140)
+    frecuencia_medicion = models.CharField(max_length=50)
+    fuente=models.CharField(max_length=50)
+    responsable=models.CharField(max_length=140)
+    meta_programaa=models.CharField(max_length=50)
+    sentido_indicador=models.CharField(max_length=50, default="Ascendente")
+    medicion_anterior=models.CharField(max_length=50)
+    linea_base=models.CharField(max_length=50)
+    date=models.DateTimeField(auto_now=True)
+    elaboro=models.CharField(max_length=140)
