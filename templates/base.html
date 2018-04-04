@@ -1,53 +1,51 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Plan Municipal de Desarrollo</title>
     <!-- Styles CSS -->
-    <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Own Styles -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="uk-navbar-container uk-margin background-primary" uk-navbar>
-        <div class="uk-navbar-center">
-            <div class="uk-navbar-center-left"><div>
-                <ul class="uk-navbar-nav">
-                    <li class="uk-active"><a class="color-accent" href="#">Plan Municipal de Desarrollo</a></li>
-                    <li class="color-accent">
-                        <a class="color-accent" href="#">Indicadores</a>
-                        <div class="uk-navbar-dropdown">
-                            <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li class="uk-active"><a href="#">Añadir</a></li>
-                                <!--<li><a href="#">Item</a></li>
-                                <li><a href="#">Item</a></li>-->
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div></div>
-            <a class="uk-navbar-item uk-logo" href="#">
-              <img src="{%static 'images/logo.jpg' %}" alt="Gobierno de la Gente" class="logo-img">
-            </a>
-            <div class="uk-navbar-center-right"><div>
-                <ul class="uk-navbar-nav">
-                    <li><a class="color-accent" href="">Página oficial</a></li>
-                </ul>
-            </div></div>
-
+    <nav class="navbar navbar-expand-lg navbar-light background-primary justify-content-around" style="max-height:80px !important;">
+      <div class="col-lg-4 text-right color-accent">
+        <a class="btn background-primary">
+          Plan Municipal de Desarrollo
+        </a>
+      </div>
+      <div class="col-lg-4 text-center">
+        <img src="{%static 'images/logo.jpg'%}" alt="Gobierno de la gente" class="logo-img">
+      </div>
+      <div class="col-lg-4 text-left">
+        <div class="dropdown">
+          <a class="btn dropdown-toggle color-accent" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Indicadores
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
         </div>
+</div>
+      </div>
     </nav>
     <!-- End navbar -->
+    <div class="container">
+      {% block content %}
 
-    {% block content %}
-
-    {% endblock content %}
+      {% endblock content %}
+    </div>
   </body>
   <!-- Scripts -->
-  <!-- UIkit JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
+  <!-- Boostrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </html>

@@ -2,5 +2,106 @@
 
 
 {% block content %}
-  <h1>Hola perros</h1>
+  <div class="paddings-vertical">
+    <div class="row ">
+      <div class="col-md-12 text-center">
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li {% if message.tags %} class="{{ message.tags }}" {% endif %}><h4>{{ message }}</h4></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <h3>Registra tu indicador</h3>
+      </div>
+    </div>
+    <form class="" action="{%url 'indicadores:create'%}" method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="indicador">Indicador:</label>
+        {{form.indicador}}
+      </div>
+      <div class="form-group">
+        <label for="eje">Eje:</label>
+        {{form.eje}}
+      </div>
+      <div class="form-group">
+        <label for="objetivo">Objetivo:</label>
+        {{form.objetivo}}
+      </div>
+      <div class="form-group">
+        <label for="estrategia">Estrategia:</label>
+        {{form.estrategia}}
+      </div>
+      <div class="form-group">
+        <label for="linea_accion">Línea de acción:</label>
+        {{form.linea_accion}}
+      </div>
+      <div class="form-group">
+        <label for="descripcion">Descripción:</label>
+        {{form.descripcion}}
+      </div>
+      <div class="form-group">
+        <label for="nombre_formato">Nombre del formato:</label>
+        {{form.nombre_formato}}
+      </div>
+      <div class="form-group">
+        <label for="dimension_medir">Dimensión a medir:</label>
+        {{form.dimension_medir}}
+      </div>
+      <div class="form-group">
+        <label for="observaciones">Observaciones:</label>
+        {{form.observaciones}}
+      </div>
+      <div class="form-group">
+        <label for="metodo_calculo">Método de Cálculo:</label>
+        {{form.metodo_calculo}}
+      </div>
+      <div class="form-group">
+        <label for="frecuencia_medicion">Frecuencia de la medición:</label>
+        {{form.frecuencia_medicion}}
+      </div>
+      <div class="form-group">
+        <label for="fuente">Fuente:</label>
+        {{form.fuente}}
+      </div>
+      <div class="form-group">
+        <label for="responsable">Responsable:</label>
+        {{form.responsable}}
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="meta_programada">Meta programada:</label>
+            {{form.meta_programada}}
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="sentido_indicador">Sentido indicador:</label>
+            {{form.sentido_indicador}}
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="medicion_anterior">Medicion anterior:</label>
+            {{form.medicion_anterior}}
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="linea_base">Línea de base:</label>
+            {{form.linea_base}}
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="elaboro">Elaboro:</label>
+        {{form.elaboro}}
+      </div>
+      <div class="text-center">
+          <input class="btn btn-outline-primary" type="submit" name="submit" value="Guardar cambios">
+      </div>
+    </form>
+  </div>
 {% endblock content %}
