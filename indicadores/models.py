@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 class Indicadores(models.Model):
     indicador = models.CharField(max_length=200)
@@ -23,3 +24,6 @@ class Indicadores(models.Model):
 
     def __str__(self):
         return self.indicador
+
+    def get_absolute_url(self):
+        return reverse('indicadores:detail', args=[self.id])

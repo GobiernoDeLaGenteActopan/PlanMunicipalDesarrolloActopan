@@ -15,7 +15,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light background-primary justify-content-around" style="max-height:80px !important;">
       <div class="col-lg-4 text-right color-accent">
-        <a class="btn background-primary">
+        <a class="btn background-primary color-accent" href="/static/PDF/plan.pdf" target="_blank">
           Plan Municipal de Desarrollo
         </a>
       </div>
@@ -28,9 +28,8 @@
             Indicadores
           </a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+    <a class="dropdown-item" href="{%url 'indicadores:list'%}">Lista</a>
+    <a class="dropdown-item" href="{%url 'indicadores:create'%}">Crear</a>
   </div>
         </div>
 </div>

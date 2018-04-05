@@ -3,7 +3,7 @@ from django import views
 from .forms import IndicadorForm
 from django.http import FileResponse, Http404
 from django.contrib import messages
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from .models import Indicadores
 
 class CreateView(views.View):
@@ -34,6 +34,10 @@ class CreateView(views.View):
 class ListView(ListView):
     model = Indicadores
     context_object_name = 'indicadores'
+
+class DetailView(DetailView):
+    model = Indicadores
+    context_object_name = "indicador"
 
 class LandingView(views.View):
     pass

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h3>Indicadores registrados</h3>
+  <h3 class="text-center">Indicadores registrados</h3>
 
   {% for indicador in indicadores %}
   <div class="card margins-vertical">
@@ -9,8 +9,8 @@
     <div class="card-body">
     <h5 class="card-title">{{indicador.indicador}}</h5>
     <p class="card-text">{{indicador.descripcion}}</p>
-    <a href="#" class="btn background-primary color-accent">Ir a detalle</a>
-    
+    <a href="{{indicador.get_absolute_url}}" class="btn background-primary color-accent">Ir a detalle</a>
+
     </div>
   </div>
   {% endfor %}

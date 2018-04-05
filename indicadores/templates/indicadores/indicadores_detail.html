@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="text-center">
+      <div class="row margin-bottom-small">
+        <div class="col-md-3 text-center">
+          <a href="{%url 'indicadores:list'%}" class="btn background-primary color-accent">Regresar a lista</a>
+        </div>
+        <div class="col-md-6">
+          <h1 class="">Indicador # {{indicador.id}}</h1>
+        </div>
+        <div class="col-md-3">
+
+        </div>
+
+      </div>
+      <div class="row margin-bottom-small">
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Indicador</h5>
+              <p class="card-text text-justify ">{{indicador.indicador}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Eje</h5>
+              <p class="card-text text-justify ">{{indicador.eje}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Objetivo</h5>
+              <p class="card-text text-justify ">{{indicador.objetivo}}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row margin-bottom-small">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Estrategia</h5>
+              <p class="card-text text-justify ">{{indicador.estrategia}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Línea de acción</h5>
+              <p class="card-text text-justify ">{{indicador.linea_accion}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Descripción</h5>
+              <p class="card-text text-justify ">{{indicador.descripcion}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row margin-bottom-small">
+        <div class="col-md-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Nombre del formato</h5>
+              <p class="card-text text-justify ">{{indicador.nombre_formato}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Dimensión a medir</h5>
+              <p class="card-text text-justify ">{{indicador.dimension_medir}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Observaciones</h5>
+              <p class="card-text text-justify ">{{indicador.observaciones}}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row margin-bottom-small">
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Método de Cálculo</h5>
+              <p class="card-text text-justify ">{{indicador.metodo_calculo}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Frecuencia de la medición</h5>
+              <p class="card-text text-justify ">{{indicador.frecuencia_medicion}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Fuente</h5>
+              <p class="card-text text-justify ">{{indicador.fuente}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row margin-bottom-small">
+        <div class="col-md-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Meta programada</h5>
+              <p class="card-text text-justify ">{{indicador.meta_programada}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Sentido indicador</h5>
+              <p class="card-text text-justify ">{{indicador.sentido_indicador}}</p>
+            </div>
+          </div>
+        </div>
+          <div class="col-md-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Medición anterior</h5>
+                <p class="card-text text-justify ">{{indicador.medicion_anterior}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Línea de base</h5>
+                <p class="card-text text-justify ">{{indicador.linea_base}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <div class="row margin-bottom-small">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Responsable</h5>
+              <p class="card-text text-justify ">{{indicador.responsable}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Elaboró</h5>
+              <p class="card-text text-justify ">{{indicador.elaboro}}</p>
+            </div>
+          </div>
+        </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Fecha y Hora de creación</h5>
+                <p class="card-text text-justify ">{{indicador.date}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+  </div>
+
+{% endblock content %}

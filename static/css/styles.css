@@ -50,3 +50,11 @@
     background-color: forestgreen;
     color: #FFFFFF;
 }
+
+.margin-bottom-small{
+  margin-bottom: 2vh !important;
+}
+
+.text-justify{
+  text-align: justify;
+}
