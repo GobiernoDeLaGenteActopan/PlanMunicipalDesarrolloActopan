@@ -3,6 +3,8 @@ from django import views
 from .forms import IndicadorForm
 from django.http import FileResponse, Http404
 from django.contrib import messages
+from django.views.generic import ListView
+from .models import Indicadores
 
 class CreateView(views.View):
     def get(self, request):
@@ -28,3 +30,10 @@ class CreateView(views.View):
             messages.add_message(request, messages.ERROR, "Hubo un error al guardar")
 
         return render(request, template_name, context)
+
+class ListView(ListView):
+    model = Indicadores
+    context_object_name = 'indicadores'
+
+class LandingView(views.View):
+    pass

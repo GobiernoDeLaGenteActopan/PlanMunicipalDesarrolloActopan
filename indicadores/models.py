@@ -20,3 +20,6 @@ class Indicadores(models.Model):
     linea_base=models.CharField(max_length=50, blank=True, null=True)
     date=models.DateTimeField(auto_now=True)
     elaboro=models.CharField(max_length=140)
+
+    def __str__(self):
+        return self.indicador

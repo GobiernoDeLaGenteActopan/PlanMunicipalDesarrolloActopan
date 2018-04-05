@@ -18,6 +18,11 @@
   padding-bottom: 5vh !important;
 }
 
+.margins-vertical{
+  margin-top: 5vh !important;
+  margin-bottom: 5vh !important;
+}
+
 .btn-outline-primary{
   color: #76227c;
   background-color: transparent;
